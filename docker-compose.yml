@@ -1,0 +1,7 @@
+version: '2'
+services:
+  haproxy:
+    build: .
+    image: jameseckersall/haproxy
+    environment:
+      DEBUG: "no"
