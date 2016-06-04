@@ -9,7 +9,7 @@ services:
 
 before_install:
   - bundle install
-  - export IMAGE=jameseckersall/docker-centos-base
+  - export IMAGE=jameseckersall/docker-haproxy
   - docker build -t $IMAGE .
 
 script:
