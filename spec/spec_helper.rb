@@ -3,7 +3,8 @@ require "docker"
 
 describe "Dockerfile" do
   before(:all) do
-    image = Docker::Image.build_from_dir('.')
+    #image = Docker::Image.build_from_dir('.')
+    image = Docker::Image.get(ENV['IMAGE'])
 
     set :backend, :docker
     set :docker_image, image.id

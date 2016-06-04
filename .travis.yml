@@ -9,7 +9,8 @@ services:
 
 before_install:
   - bundle install
-  - docker build -t jameseckersall/docker-centos-base .
+  - export IMAGE=jameseckersall/docker-centos-base
+  - docker build -t $IMAGE .
 
 script:
   - bundle exec rake
