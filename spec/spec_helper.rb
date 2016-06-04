@@ -17,6 +17,10 @@ describe "Dockerfile" do
     it { should be_running }
   end
 
+  describe command('sleep 2s # to let haproxy start') do
+    its(:stdout) { should match /^$/ }
+  end
+
   describe process('haproxy') do
     it { should be_running }
   end
