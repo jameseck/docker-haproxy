@@ -1,0 +1,10 @@
+version: '2'
+services:
+  haproxy:
+    build: .
+    image: jameseckersall/alpine-haproxy
+    environment:
+      DEBUG: "no"
+#    volumes:
+#      - /export/r5/dockerstack/haproxy_ssl:/etc/haproxy/ssl:Z
+#      - /export/r5/dockerstack/haproxy_maps:/etc/haproxy/maps:Z
